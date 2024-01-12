@@ -3,14 +3,17 @@
 # get input from user
 
 num = int(input("type a no to get its factors:"))
+result =[]
 
-result =()
-
-if num< 2:
+while num < 2:
     print("no is too small no factors available for 0 and 1")
+    break
 
-for i in range(2, num+1):
-          if num%i == 0:
-              print(i)
+for i in range(2, num):
+        if num % i == 0:
+            result.append(i)
+
 else:
-    print("no factors available given no is prime.")
+ print("given no is prime no factors are available:")
+
+print("The factors are", result)
